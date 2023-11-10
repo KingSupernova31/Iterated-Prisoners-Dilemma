@@ -1,0 +1,1 @@
+Follow the instructions in `apiDataToPrograms.js` and run it once to get a file named `allIPDPrograms.json`. Then you can run `runIPDTournament.js` to get the results. Scores are logged in the console, and the full results are saved to `IPDResults.json`.

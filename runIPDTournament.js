@@ -1,12 +1,5 @@
 /*
-Rules:
-
-Bots may not call fetch, fs, or any other way to get external code or read data that I don't want them to have.
-Bots may not access global variables like programs and programsData.
-Bots may not access arguments passed to the global function that called them, such as the history argument in getIndividualResult.
-Bots may access any argument that is passed to them, or that was created by another bot simulating them.
-In short, bots may mess with a bot that they're simulating or a bot that's simulating them. Bots may not mess with me or with another bot at the top level of the heiarachy.
-
+General rules for what you can access/modify: Bots may mess with a bot that they're simulating or a bot that's simulating them. Bots may not mess with the tournament program or with another bot at the top level of the heiarachy.
 */
 
 const fs = require("fs");
@@ -182,6 +175,6 @@ const runTournament = function() {
 	const numValidPrograms = Object.keys(programData).length;
 	console.log(`${numValidPrograms} bots entered the tournament. The minimum score is 0, and the maximum is ${numValidPrograms * 3}. If all bots had cooperated they would have each gotten ${numValidPrograms * 2} points, and if they had all defeected they would have each gotten ${numValidPrograms}. Final scores:`);
 	console.log(finalScores);
-	fs.writeFileSync("ipdResults.json", JSON.stringify(programData));
+	fs.writeFileSync("IPDResults.json", JSON.stringify(programData));
 }
 runTournament();

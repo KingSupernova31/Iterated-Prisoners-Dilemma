@@ -20,7 +20,7 @@ const programData = {};
 for (let i in programs) {
 	if (programs[i] !== null) {
 		programData[i] = {
-			"id": i,
+			"id": Number(i),
 			"source": programs[i],
 			"scores": {},//This will be filled with keys for each opponent id, and values that are objects like {id:0, score:2, matchHistory:[]}
 			"finalScore": 0

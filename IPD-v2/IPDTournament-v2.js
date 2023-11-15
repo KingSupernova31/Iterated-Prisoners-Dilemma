@@ -15,6 +15,10 @@ const shuffle = function(array) {
 
 const simulate = async function(source, opponentSource, history, timeLimit) {
 
+	if (timeLimit === undefined) {
+		timeLimit = 1000;
+	}
+
 	const sleep = async function(ms) {
 		return new Promise(resolve => setTimeout(resolve, ms));
 	}
